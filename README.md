@@ -27,12 +27,40 @@ __Hypothesis 2__: Financial news sentiment is significantly correlated with dail
   <img src="https://i.ibb.co/RbBZ6Xd/H2.png">
 </p>
 
+__Hypothesis 3__: A fine-tuned LSTM model integrating financial news sentiment has higher accuracy in predicting market trend than the one without.
 
-
-
-
-### Result Summary
-Below is a table for F1 Scores of different models and feature sets.  
 <p align="center">
-  <img src="https://i.ibb.co/2sx43RR/image.png">
+  <img src="https://i.ibb.co/YkPfWVL/H3.png">
 </p>
+
+
+### Experiment Design
+
+The project is designed for three phases. 
+In __Phase 1__, accuracy of news sentiment classification is tested on the benchmark dataset with VADER, Keras and FinBERT respectively. 
+In __Phase 2__, Pearson correlation between news sentiment scores and financial indicators are plotted for the two stocks. 
+In __Phase 3__, two models are implemented to predict stock prices, with one based on financial indicators only and the other including sentiment scores as a feature. 
+
+<p align="center">
+  <img src="https://i.ibb.co/HBbjfnC/EDesign.png">
+</p>
+ 
+<p align="center">
+  <img src="https://i.ibb.co/CJcjqrr/Ed-2.png">
+</p>
+
+### Results
+
+Results of two models are evaluated. The first model includes only 10 financial indicators as features to predict next day close price, using the data from 1 day and 10 days respectively.  Fig 13-1 and Fig 13-2 visually present the training result for stock AAPL. 
+ 
+<p align="center">
+  <img src="https://i.ibb.co/KqzPcRs/Fig13.png">
+</p>
+
+In the second model, I add one additional feature ‘sentiment score’ and examine whether it contributes to the model accuracy in predicting next day close price of the two stocks. Fig 15-1 and Fig 15-2 visually present the training result of the second model for stock AAPL. 
+
+<p align="center">
+  <img src="https://i.ibb.co/SnmtcBg/Fig15.png">
+</p>
+
+The result suggests that model performance for AAPL improves after adding sentiment score as a feature, with maximum 10.4% increase in R-squared and maximum 39.8% decrease in MAE. For MSFT, however, the results suggest an opposite direction. Although the first model achieves a relatively high R-squared (91.5% for 1-day model and 89.9% for 10-day model), the second model with sentiment score does not contribute to accuracy. 
