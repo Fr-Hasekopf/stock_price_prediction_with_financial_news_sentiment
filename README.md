@@ -38,8 +38,8 @@ __Hypothesis 3__: A fine-tuned LSTM model integrating financial news sentiment h
 
 The project is designed for three phases. 
 In __Phase 1__, accuracy of news sentiment classification is tested on the benchmark dataset with VADER, Keras and FinBERT respectively. 
-In __Phase 2__, Pearson correlation between news sentiment scores and financial indicators are plotted for the two stocks. 
-In __Phase 3__, two models are implemented to predict stock prices, with one based on financial indicators only and the other including sentiment scores as a feature. 
+In __Phase 2__, Pearson correlation between news sentiment scores and financial indicators are plotted for the two stocks.  
+In __Phase 3__, two models are implemented to predict stock prices, with one based on financial indicators only and the other including sentiment scores as a feature.  
 
 <p align="center">
   <img src="https://i.ibb.co/HBbjfnC/EDesign.png">
